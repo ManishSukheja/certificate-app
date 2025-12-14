@@ -36,12 +36,15 @@ router.post('/', async (req, res) => {
   try {
     const result = await generateCertificate(req.body);
 
-    await sendCertificateEmail({
-      name: req.body.name,
-      email: req.body.email,
-      pdfBuffer: result.pdfBuffer,
-      jpgBuffer: result.jpgBuffer,
+    sendCertificateEmail({
+        name: req.body.name,
+        email: req.body.email,
+        pdfBuffer: result.pdfBuffer,
+        jpgBuffer: result.jpgBuffer,
+    }).catch((err) => {
+        logger.error(`Email sending failed for ${req.body.email}: ${err.message}`);
     });
+
 
     logger.info(`Certificate generated successfully for ${req.body.email}`);
     return res.json({
