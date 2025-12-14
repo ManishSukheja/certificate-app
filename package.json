@@ -1,0 +1,23 @@
+{
+  "name": "certificate-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@react-pdf/renderer": "^4.3.1",
+    "body-parser": "^2.2.1",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jimp": "^0.16.1",
+    "nodemailer": "^7.0.11",
+    "pdfkit": "^0.17.2",
+    "sharp": "^0.34.5",
+    "winston": "^3.19.0"
+  }
+}
