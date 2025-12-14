@@ -81,9 +81,8 @@ image.print(
   image.print(bodyFont, 100, startY + gap * 3, `Business Name: ${data.businessName}`);
   image.print(bodyFont, 100, startY + gap * 4, `Business Address: ${data.businessAddress}`);
 
-  image.print(smallFont, 650, 620, 'Digitally Signed by'); 
+  image.print(smallFont, 650, 620, 'Digitally Signed Certificate'); 
   image.print(bodyFont, 650, 560, 'Manish Sukheja');
-  image.print(smallFont, 650, 600, 'Authorized Signatory');
 
   
   const jpgBuffer = await image.getBufferAsync(Jimp.MIME_JPEG);
